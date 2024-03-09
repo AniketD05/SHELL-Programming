@@ -1,0 +1,109 @@
+Question 1: Write a shell script that prints "Hello, World!" to the terminal.
+
+Solution--->
+
+Step 1 : vi A2_CQ1.sh
+
+#!/bin/bash
+
+echo "Hello, World!"
+
+Step 2 : chmod +x A2_CQ1.sh
+Step 3 : ./A2_CQ1.sh
+
+output --> Hello, World!
+
+Question 2: Declare a variable named "name" and assign the value "CDAC Mumbai" to it. Print the value of the variable.
+
+Solution--->
+
+Step 1 : vi A2_CQ2.sh
+
+#!/bin/bash
+
+name="CDAC Mumbai" 
+
+echo "$name"
+
+Step 2 : chmod +x A2_CQ2.sh
+Step 3 : ./A2_CQ2.sh
+
+output --> CDAC Mumbai
+
+Question 3: Write a shell script that takes a number as input from the user and prints it.
+
+Solution--->
+
+Step 1 : vi A2_CQ3.sh
+
+	#!/bin/bash
+
+	echo "Enter Number: "
+
+	read num
+
+	echo "$num"
+
+Step 2 : chmod +x A2_CQ3.sh
+Step 3 : ./A2_CQ3.sh
+
+output --> Enter Number: 
+		56
+		Number entered is 56
+
+Question 4: Write a shell script that performs addition of two numbers (e.g., 5 and 3) and prints the
+result.
+
+Solution--->
+
+Step 1 : vi A2_CQ4.sh
+
+	#!/bin/bash
+
+	echo "Enter Number 1: "
+	read num1
+	echo "Enter Number 1: "
+	read num2
+
+	echo "Entered numbers are $num1 $num2"
+
+	sum=$(( num1+num2 ))
+
+	echo "Sum is $sum"
+
+Step 2 : chmod +x A2_CQ4.sh
+Step 3 : ./A2_CQ4.sh
+
+output --> Enter Number 1: 
+		10
+		Enter Number 1: 
+		20
+		Entered numbers are 10 20
+		Sum is 30
+
+Question 5: Write a shell script that takes a number as input and prints "Even" if it is even, otherwise prints "Odd".
+
+Solution--->
+
+Step 1 : vi A2_CQ5.sh
+
+	#!/bin/bash
+
+	echo "Enter Number:"
+	read num
+
+	if(( num%2==0  ))
+	then
+        echo "Even"
+	else
+        echo "Odd"
+	fi
+
+Step 2 : chmod +x A2_CQ5.sh
+Step 3 : ./A2_CQ5.sh
+
+output --> Enter Number:
+	   5
+	   Odd
+	   4
+	   Even

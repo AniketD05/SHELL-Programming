@@ -107,3 +107,236 @@ output --> Enter Number:
 	   Odd
 	   4
 	   Even
+
+Question 6: Write a shell script that uses a for loop to print numbers from 1 to 5.
+
+Solution--->
+
+Step 1 : vi A2_CQ6.sh
+
+	#!/bin/bash
+
+	for(( i=1;i<=5;i++ ))
+	do
+        	echo "$i"
+	done
+
+Step 2 : chmod +x A2_CQ6.sh
+Step 3 : ./A2_CQ6.sh
+
+output --> 	1
+		2
+		3
+		4
+		5
+
+Question 7: Write a shell script that uses a while loop to print numbers from 1 to 5.	
+
+Solution--->
+
+Step 1 : vi A2_CQ7.sh
+
+	#!/bin/bash
+
+	i=1
+	while((i<=5))
+	do
+        	echo "$i"
+        	((i++))
+	done
+
+Step 2 : chmod +x A2_CQ7.sh
+Step 3 : ./A2_CQ7.sh
+
+output --> 	1
+		2
+		3
+		4
+		5
+
+Question 8: Write a shell script that checks if a file named "file.txt" exists in the current directory. If it does, print "File exists", otherwise, print "File does not exist".
+
+Solution--->
+
+Step 1 : vi A2_CQ8.sh
+
+	#!/bin/bash
+	
+	if [ -f "file.txt" ];
+	then
+		echo "File exixts"
+	else
+		echo "File does not exist"
+	fi
+	
+Step 2 : chmod +x A2_CQ8.sh
+Step 3 : ./A2_CQ8.sh
+
+output --> 	File exists
+
+Question 9: Write a shell script that uses the if statement to check if a number is greater than 10 and prints a message accordingly.
+
+Solution--->
+
+Step 1 : vi A2_CQ9.sh
+
+	#!/bin/bash
+
+	echo "Enter Number: "
+	read num
+
+	if [ num>10  ];
+	then
+        	echo "Number is greater than '10'"
+	else
+        	echo "Number is less than '10'"
+	fi
+
+	
+Step 2 : chmod +x A2_CQ9.sh
+Step 3 : ./A2_CQ9.sh
+
+output --> 	Enter Number: 
+		89
+		Number is greater than '10'
+		Enter Number: 
+		4
+		Number is greater than '10'
+
+Question 10: Write a shell script that uses nested for loops to print a multiplication table for numbers from 1 to 5. The output should be formatted nicely, with each row representing a number and each column representing the multiplication result for that number.
+
+Solution--->
+
+Step 1 : vi A2_CQ10.sh
+
+	#!bin/bash
+
+	for (( i=1;i<=5;i++ ));
+	do
+        for (( j=1;j<=10;j++ ));
+        do
+                echo "$i "*" $j "=" "$((i*j))" "
+        done
+        	echo "\n"
+	done
+	
+Step 2 : chmod +x A2_CQ10.sh
+Step 3 : ./A2_CQ10.sh
+
+output -->
+
+1 * 1 = 1 
+1 * 2 = 2 
+1 * 3 = 3 
+1 * 4 = 4 
+1 * 5 = 5 
+1 * 6 = 6 
+1 * 7 = 7 
+1 * 8 = 8 
+1 * 9 = 9 
+1 * 10 = 10 
+
+
+2 * 1 = 2 
+2 * 2 = 4 
+2 * 3 = 6 
+2 * 4 = 8 
+2 * 5 = 10 
+2 * 6 = 12 
+2 * 7 = 14 
+2 * 8 = 16 
+2 * 9 = 18 
+2 * 10 = 20 
+
+
+3 * 1 = 3 
+3 * 2 = 6 
+3 * 3 = 9 
+3 * 4 = 12 
+3 * 5 = 15 
+3 * 6 = 18 
+3 * 7 = 21 
+3 * 8 = 24 
+3 * 9 = 27 
+3 * 10 = 30 
+
+
+4 * 1 = 4 
+4 * 2 = 8 
+4 * 3 = 12 
+4 * 4 = 16 
+4 * 5 = 20 
+4 * 6 = 24 
+4 * 7 = 28 
+4 * 8 = 32 
+4 * 9 = 36 
+4 * 10 = 40 
+
+
+5 * 1 = 5 
+5 * 2 = 10 
+5 * 3 = 15 
+5 * 4 = 20 
+5 * 5 = 25 
+5 * 6 = 30 
+5 * 7 = 35 
+5 * 8 = 40 
+5 * 9 = 45 
+5 * 10 = 50 
+
+
+Question 11: Write a shell script that uses a while loop to read numbers from the user until the user enters a negative number. For each positive number entered, print its square. Use the break statement to exit the loop when a negative number is entered.
+
+Solution--->
+
+Step 1 : vi A2_CQ11.sh
+
+	#1/bin/bash
+
+num=1
+while (( num>0 )) 
+do
+        echo "Enter Number:"
+        read num
+        
+        if(( num<0  ))
+        then
+                break
+        else
+                echo "Square of entered number is $(( num*num ))
+        fi
+done
+
+	
+Step 2 : chmod +x A2_CQ11.sh
+Step 3 : ./A2_CQ11.sh
+
+output -->
+
+Enter Number:
+2
+Square of entered number is 4
+Enter Number:
+6
+Square of entered number is 36
+Enter Number:
+-2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
